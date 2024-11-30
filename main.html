@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Vision</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('img.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .dashboard {
+            width: 85%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 30px;
+            border: 4px solid #0a8511; /* Bold green border */
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .dashboard h1 {
+            margin-bottom: 40px;
+            font-size: 36px; /* Slightly larger font */
+            font-weight: bold;
+            color: #2f855a; /* Solid green fallback color */
+            background: linear-gradient(135deg, #2f855a, #81c784); /* Green gradient */
+            background-clip: text;
+            color: transparent; /* Make text color transparent to show gradient */
+            -webkit-background-clip: text; /* Apply gradient to text for WebKit browsers */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+        }
+        .module {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9); /* Subtle green gradient */
+            border: 2px solid #4CAF50; /* Highlight border */
+            padding: 20px; /* Slightly larger padding */
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Improved shadow */
+        }
+        .module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger hover effect */
+            border-color: #2f855a; /* Darker green border on hover */
+        }
+        .module span {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        .module button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .module button:hover {
+            background-color: #45a049;
+            transform: scale(1.05); /* Slightly larger on hover */
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Agro Vision</h1>
+        <div class="module">
+            <span>Crop Price Prediction</span>
+            <button onclick="window.location.href='http://127.0.0.1:5000'">View</button>
+        </div>
+        <div class="module">
+            <span>Crop Recommendation</span>
+            <button onclick="window.location.href='http://127.0.0.1:5002'">View</button>
+        </div>
+        <div class="module">
+            <span>Crop Yield Prediction</span>
+            <button onclick="window.location.href='http://127.0.0.1:5001'">View</button>
+        </div>
+    </div>
+</body>
+</html>
